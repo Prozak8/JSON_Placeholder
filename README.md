@@ -13,6 +13,12 @@ ng s to startup localhost
 ### **Overview**
 -------
 
+### **Bare Bone Call w/ Ruby**
+`require 'rest-client'
+
+response = RestClient.get('https://jsonplaceholder.typicode.com/users')
+puts response.body`
+
 ### **Author**
 -------
 * **Zakary Howard**

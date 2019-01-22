@@ -20,4 +20,8 @@ export class UsersComponent implements OnInit {
       result => this.users = result
     )
   }
+
+  clearUsers() {
+    this.users = null 
+  }
 }
