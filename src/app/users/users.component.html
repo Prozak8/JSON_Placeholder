@@ -10,13 +10,7 @@
   Clear
 </button>
 
-<div 
-  class="container"
-  *ngFor="let user of users">
-  {{ user.name }}
-</div>
-
-<div class="container emp-profile">
+<div *ngFor="let user of users" class="container emp-profile">
   <form method="post">
     <div class="row">
       <div class="col-md-4">
@@ -27,12 +21,12 @@
       <div class="col-md-6">
         <div class="profile-head">
           <h5>
-            user.name
+            {{user.name}}
           </h5>
           <h6>
-            @user.username
+            @{{user.username}}
           </h6>
-          <p class="proile-rating">COMPANY : <span>user.company.name</span></p>
+          <p class="proile-rating">COMPANY : <span>{{user.company.name}}</span></p>
           <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item">
               <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">About</a>
@@ -58,7 +52,7 @@
                 <label>User Id</label>
               </div>
               <div class="col-md-6">
-                <p>user.id</p>
+                <p>{{user.id}}</p>
               </div>
             </div>
             <div class="row">
@@ -66,7 +60,7 @@
                 <label>Name</label>
               </div>
               <div class="col-md-6">
-                <p>user.name</p>
+                <p>{{user.name}}</p>
               </div>
             </div>
             <div class="row">
@@ -74,7 +68,7 @@
                 <label>Email</label>
               </div>
               <div class="col-md-6">
-                <p>user.email</p>
+                <p>{{user.email}}</p>
               </div>
             </div>
             <div class="row">
@@ -82,7 +76,7 @@
                 <label>Phone</label>
               </div>
               <div class="col-md-6">
-                <p>user.phone</p>
+                <p>{{user.phone}}</p>
               </div>
             </div>
           </div>
@@ -92,7 +86,7 @@
                 <label>Street</label>
               </div>
               <div class="col-md-6">
-                <p>user.address.street</p>
+                <p>{{user.address.street}}</p>
               </div>
             </div>
             <div class="row">
@@ -100,7 +94,7 @@
                 <label>Suite</label>
               </div>
               <div class="col-md-6">
-                <p>user.address.suite</p>
+                <p>{{user.address.suite}}</p>
               </div>
             </div>
             <div class="row">
@@ -108,7 +102,7 @@
                 <label>City</label>
               </div>
               <div class="col-md-6">
-                <p>user.address.city</p>
+                <p>{{user.address.city}}</p>
               </div>
             </div>
               <div class="row">
@@ -116,7 +110,7 @@
                   <label>Zipcode</label>
                 </div>
                 <div class="col-md-6">
-                  <p>user.address.zipcode</p>
+                  <p>{{user.address.zipcode}}</p>
                 </div>
               </div>
               <div class="row">
@@ -124,8 +118,8 @@
                   <label>Location</label>
                 </div>
                 <div class="col-md-6">
-                  <p>user.address.geo.lat</p>
-                  <p>user.address.geo.lng</p>
+                  <p>{{user.address.geo.lat}}</p>
+                  <p>{{user.address.geo.lng}}</p>
                 </div>
               </div>  
             </div>
@@ -135,7 +129,7 @@
                   <label>Name</label>
                 </div>
                 <div class="col-md-6">
-                  <p>user.company.name</p>
+                  <p>{{user.company.name}}</p>
                 </div>
               </div>
               <div class="row">
@@ -143,7 +137,7 @@
                   <label>Catchphrase</label>
                 </div>
                 <div class="col-md-6">
-                  <p>user.company.catchPhrase</p>
+                  <p>{{user.company.catchPhrase}}</p>
                 </div>
               </div>
               <div class="row">
@@ -151,7 +145,7 @@
                   <label>BS</label>
                 </div>
                 <div class="col-md-6">
-                  <p>user.company.bs</p>
+                  <p>{{user.company.bs}}</p>
                 </div>
               </div>
             </div>
