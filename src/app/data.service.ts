@@ -13,4 +13,9 @@ export class DataService {
     allUsers(){
         return this._httpClient.get(`${this.placeholderApi}/users`);
     }
+
+    // random(){
+    //     random = Math.floor(0..50)
+    //     return this._httpClient.get(`${this.placeholderApi}/users/`)
+    // }
 }

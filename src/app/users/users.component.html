@@ -1,14 +1,30 @@
-<button 
-  class="btn btn-primary"
-  (click)="showAllUsers()">
-  All Users
-</button>
+<div class="container">
+  <div style="margin-top: 20px;" class="row">
+    <div class="col text-center">
+      <button 
+        class="btn btn-primary"
+        (click)="showAllUsers()">
+        All Users
+      </button>
+    </div>
 
-<button
-  class="btn btn-danger"
-  (click)="clearUsers()">
-  Clear
-</button>
+    <div class="col text-center">
+      <button
+        class="btn btn-success"
+        (click)="randomUser()">
+        Random
+      </button>
+    </div>
+
+    <div class="col text-center">
+      <button
+        class="btn btn-danger"
+        (click)="clearUsers()">
+        Clear Users
+      </button>
+    </div>
+  </div>
+</div>
 
 <div *ngFor="let user of users" class="container emp-profile">
   <form method="post">
