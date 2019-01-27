@@ -21,6 +21,13 @@ export class UsersComponent implements OnInit {
     )
   }
 
+  getRandomUser() {
+    this.clearUsers()
+    this._dataService.random().subscribe(
+      result => this.users = result
+    )
+  }
+
   clearUsers() {
     this.users = null 
   }

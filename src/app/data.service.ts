@@ -7,6 +7,7 @@ import { HttpClient } from '@angular/common/http';
 
 export class DataService {
     private placeholderApi = 'https://jsonplaceholder.typicode.com'
+    randomNumber = Math.floor(Math.random() * 10)
 
     constructor(private _httpClient: HttpClient) { }
 
@@ -14,8 +15,7 @@ export class DataService {
         return this._httpClient.get(`${this.placeholderApi}/users`);
     }
 
-    // random(){
-    //     random = Math.floor(0..50)
-    //     return this._httpClient.get(`${this.placeholderApi}/users/`)
-    // }
+    random(){
+        return this._httpClient.get(`${this.placeholderApi}/users/${this.randomNumber}`)
+    }
 }
