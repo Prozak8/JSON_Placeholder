@@ -26,7 +26,7 @@
   </div>
 </div>
 
-<div *ngFor="let user of users" class="container emp-profile">
+<div *ngFor="let user of users; let i = index" class="container emp-profile">
   <form method="post">
     <div class="row">
       <div class="col-md-4">
@@ -48,7 +48,7 @@
               <a class="nav-link active" id="about-tab" data-toggle="tab" href="#about" role="tab" aria-controls="about" aria-selected="true">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" id="address-tab" data-toggle="tab" href="#address" role="tab" aria-controls="address" aria-selected="false">Address</a>
+              <a class="nav-link" [id]="address-tab" data-toggle="tab" href="#address" role="tab" aria-controls="address" aria-selected="false">Address</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" id="company-tab" data-toggle="tab" href="#company" role="tab" aria-controls="company" aria-selected="false">Company</a>

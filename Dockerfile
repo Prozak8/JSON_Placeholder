@@ -1,10 +1,11 @@
-FROM node:9.6.1
+FROM node:11.4.0
 
 
 RUN mkdir /usr/src/app
 WORKDIR /usr/src/app
 
-RUN npm install -g @angular/cli@1.7.1
+RUN npm install -g @angular/cli@7.1.4
+RUN npm rebuild node-sass
 
 COPY . /usr/src/app
 

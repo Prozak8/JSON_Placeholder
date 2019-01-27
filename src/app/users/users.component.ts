@@ -22,9 +22,10 @@ export class UsersComponent implements OnInit {
   }
 
   getRandomUser() {
-    this.clearUsers()
+    this.clearUsers();
+    this.users = [];
     this._dataService.random().subscribe(
-      result => this.users = result
+      result => this.users.push(result)
     )
   }
 
