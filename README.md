@@ -19,10 +19,26 @@ require 'rest-client'
 response = RestClient.get('https://jsonplaceholder.typicode.com/users')
 puts response.body
 
-For Docker installation
-docker build -t PROJECT-NAME .
-docker run -it -v ${PWD}:/user/src/app -p CHOOSEPORT:CHOOSEPORT PROJECT-NAME
-
+For Docker 
+```
+docker build -t something-clever .
+```
+```
+docker run -it \
+  -v ${PWD}:/usr/src/app \
+  -v /usr/src/app/node_modules \
+  -p 4200:4200 \
+  --rm \
+  something-clever
+```
+```
+docker run -d \
+  -v ${PWD}:/usr/src/app \
+  -v /usr/src/app/node_modules \
+  -p 4200:4200 \
+  --name something-clever-container \
+  something-clever
+```
 ### **Author**
 -------
 * **Zakary Howard**
