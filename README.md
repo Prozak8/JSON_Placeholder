@@ -14,10 +14,11 @@ ng s to startup localhost
 [PivotalTracker](https://www.pivotaltracker.com/n/projects/2240009)
 
 ### **Bare Bone Call w/ Ruby**
+```
 require 'rest-client'
-
 response = RestClient.get('https://jsonplaceholder.typicode.com/users')
 puts response.body
+```
 
 For Docker 
 ```
